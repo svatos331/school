@@ -8,7 +8,7 @@
 ### `cd app/`
 ### `npm run start`
 #
-####Для запуска проекта через Docker:
+#### Для запуска проекта через Docker:
 ### `cd app/`
 ### `yarn build`
 ### `cd ../`
