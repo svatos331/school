@@ -6,7 +6,7 @@ const Component1 = () => {
 	const { data } = useGetTodoQuery({ authToken: "", params: { id: "1" } });
 
 	// eslint-disable-next-line no-console
-	console.log(123, data);
+	console.log(321, data);
 
 	return (
 		<div>
