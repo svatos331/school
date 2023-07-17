@@ -1,0 +1,8 @@
+.links {
+	border-collapse: collapse;
+}
+
+.links th {
+	border-left: 1px solid #121212;
+	border-right: 1px solid #121212;
+}

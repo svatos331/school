@@ -3,6 +3,7 @@ enum RoutesPaths {
 	MAIN = "/",
 	DEFAULT = "",
 	SVYATOSLAV_ZHILIN = "/svyatoslavZhilin",
+	OLEG_KORNYAKOV = "/olegKornyakov",
 }
 
 export default RoutesPaths;
