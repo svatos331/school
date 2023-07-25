@@ -4,7 +4,7 @@ import reducerPaths from "../../../../../../reducerPaths";
 
 export enum ITodoEnum {
 	id = "id",
-	name = "name",
+	name = "nameMy",
 }
 
 export interface ITodoType {

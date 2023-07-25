@@ -1,19 +1,23 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
-import { todoApi } from "./shared/entities/svyatoslavZhilin.entities/todo.entity/redux/api";
-import { todoReducer } from "./shared/entities/svyatoslavZhilin.entities/todo.entity/redux/slice";
 import reducerPaths from "./reducerPaths";
+import { todoApi } from "./shared/entities/svyatoslavZhilin.entities/todo.entity/redux/api";
+import { fishingApi } from "./shared/entities/ivanKosteev.entities/todo.entity/redux/api";
+import { todoReducer } from "./shared/entities/svyatoslavZhilin.entities/todo.entity/redux/slice";
+import { cartReducer } from "./shared/entities/ivanKosteev.entities/todo.entity/redux/slice/CartSlice";
 
 const allSliceReducersReducer = combineReducers({
+	[fishingApi.reducerPath]: fishingApi.reducer,
 	[todoApi.reducerPath]: todoApi.reducer,
+	[reducerPaths.cart]: cartReducer,
 	[reducerPaths.todo]: todoReducer,
 });
 
 export const store = configureStore({
 	reducer: allSliceReducersReducer,
 	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(todoApi.middleware),
+		getDefaultMiddleware().concat(todoApi.middleware, fishingApi.middleware),
 });
 
 setupListeners(store.dispatch);
