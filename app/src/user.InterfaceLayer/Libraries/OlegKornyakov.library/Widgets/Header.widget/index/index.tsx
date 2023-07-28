@@ -1,5 +1,8 @@
+import React from "react";
+
 import TwoLinks from "../../../UI_KIT/Molecules/TwoLinks.molecule/index/twoLinks.molecule";
-import "../styled/headerWidget.widget.css"
+import { StyledHeader } from "../styled/headerWidget.styled";
+
 const HeaderWidget = () => {
 	// eslint-disable-next-line no-console
 	const twoLinks = [
@@ -12,11 +15,12 @@ const HeaderWidget = () => {
 			SecondLink: { src: "cart", name: "Cart" },
 		},
 	];
+	
 	return (
-		<header className="header">
+		<StyledHeader>
 			<TwoLinks TwoLinks={twoLinks[0]} />
 			<TwoLinks TwoLinks={twoLinks[1]} />
-		</header>
+		</StyledHeader>
 	);
 };
 

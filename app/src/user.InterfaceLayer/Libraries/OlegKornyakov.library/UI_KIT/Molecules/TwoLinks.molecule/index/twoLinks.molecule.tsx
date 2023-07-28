@@ -1,19 +1,16 @@
-import AtomLink from "user.InterfaceLayer/Libraries/OlegKornyakov.library/UI_KIT/Atoms/AtomLink/component/Link.atom";
+import React from "react";
+import AtomLink from "user.InterfaceLayer/Libraries/OlegKornyakov.library/UI_KIT/Atoms/HeaderLink.atom/component/Link.atom";
+
 import { I2Links } from "../type/twoLinks.interface";
-import "../styled/twoLinks.molecule.css";
+import { LinksContainer, BorderWrap } from "../styled/twoLinks.styled";
 
 const TwoLinks = ({ TwoLinks }: { TwoLinks: I2Links }) => (
-	<table className="links">
-		<tr>
-			<th>
-				<AtomLink atomlinkSource={TwoLinks.FirstLink} />
-			</th>
-
-			<th>
-				<AtomLink atomlinkSource={TwoLinks.SecondLink} />
-			</th>
-		</tr>
-	</table>
+	<LinksContainer>
+		<BorderWrap>
+			<AtomLink atomlinkSource={TwoLinks.FirstLink} />
+		</BorderWrap>
+		<AtomLink atomlinkSource={TwoLinks.SecondLink} />
+	</LinksContainer>
 );
 
 export default TwoLinks;

@@ -1,6 +1,8 @@
-import '../styled/h2.styled.css'
-import'../../../../constants/fonts/fonts.constant.css'
-const H2Atom = (header: string) => {
-    <h2 className="h2">{header}</h2>
+import React from "react";
+
+import { H2Styled } from "../styled/h2.styled";
+
+const H2Atom = ({ headerSrc }: { headerSrc: string }) => {
+	return <H2Styled >{headerSrc}</H2Styled>;
 };
-export default H2Atom
+export default H2Atom;
