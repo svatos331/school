@@ -3,7 +3,7 @@ import React from "react";
 import AboutUsMolecule from "../../../UI_KIT/Molecules/AboutUs.molecule/index/AboutUs.molecule";
 import WhyChooseUsMolecule from "../../../UI_KIT/Molecules/WhyChooseUs.molecule/index/WhyChooseUsMolecule.molecule";
 
-const InfoWidgetS = () => {
+const InfoWidget = () => {
 	return (
 		<>
 			<AboutUsMolecule />
@@ -12,4 +12,4 @@ const InfoWidgetS = () => {
 	);
 };
 
-export default InfoWidgetS;
+export default InfoWidget;
