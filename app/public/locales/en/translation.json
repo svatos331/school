@@ -1,0 +1,17 @@
+{
+  "home": {
+    "logo": "Mock.Shop",
+    "locales": "Translations",
+    "h1": "The Peak Collection"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "quantity": "products",
+    "order": "Place an order"
+  },
+  "search": {
+    "placeholder": "Search"
+  }
+}
