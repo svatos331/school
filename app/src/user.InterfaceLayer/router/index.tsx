@@ -1,6 +1,7 @@
 import React from "react";
 import { RouteObject } from "react-router-dom";
 
+import olegKornyakovRoutes from "./routes/olegKornyakov.route";
 import svyatoslavZhilinRoutes from "./routes/svyatoslavZhilin.route";
 import RoutesPaths from "./routesPaths";
 import CheckAuth from "./services/Components/CheckAuth";
@@ -11,7 +12,7 @@ const mainRouter: RouteObject[] = [
 		path: RoutesPaths.MAIN,
 		element: <CheckAuth />,
 		errorElement: <Error />,
-		children: [...svyatoslavZhilinRoutes],
+		children: [...svyatoslavZhilinRoutes, ...olegKornyakovRoutes],
 	},
 ];
 
