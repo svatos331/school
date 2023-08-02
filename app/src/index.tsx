@@ -14,6 +14,8 @@ import "user.InterfaceLayer/styles/global.css";
 import "user.InterfaceLayer/styles/scrollbar.css";
 import "user.InterfaceLayer/styles/fonts.css";
 
+import "./i18n";
+
 const element = document.getElementById("app") as HTMLElement;
 const root = ReactDOM.createRoot(element);
 const routers = createBrowserRouter(mainRouter);
