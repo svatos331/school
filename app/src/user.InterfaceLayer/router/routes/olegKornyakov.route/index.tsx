@@ -71,7 +71,7 @@ const olegKornyakovRoutes: RouteObject[] = [
 				path: `${olegKornyakovRoutesPaths.LUXESUB}/:id`,
 				element: (
 					<Suspense fallback={<Loader />}>
-						<LuxeBouquetsPageCategory name="category" />
+						<LuxeBouquetsPageCategory />
 					</Suspense>
 				),
 				errorElement: <Error />,

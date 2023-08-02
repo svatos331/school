@@ -5,6 +5,7 @@ import { todoApi } from "./shared/entities/svyatoslavZhilin.entities/todo.entity
 import { todoReducer } from "./shared/entities/svyatoslavZhilin.entities/todo.entity/redux/slice";
 import { shopNowApi } from "./shared/entities/OlegKornyakov.entities/shopNow.entity/redux/api";
 import { shopNowReducer } from "./shared/entities/OlegKornyakov.entities/shopNow.entity/redux/slice";
+import { ProductsApi } from "./shared/entities/OlegKornyakov.entities/products.entity/redux/api";
 import reducerPaths from "./reducerPaths";
 
 const allSliceReducersReducer = combineReducers({
@@ -12,12 +13,14 @@ const allSliceReducersReducer = combineReducers({
 	[reducerPaths.todo]: todoReducer,
 	[shopNowApi.reducerPath]: shopNowApi.reducer,
 	[reducerPaths.shopNow]: shopNowReducer,
+	[ProductsApi.reducerPath]: ProductsApi.reducer,
+
 });
 
 export const store = configureStore({
 	reducer: allSliceReducersReducer,
 	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(todoApi.middleware, shopNowApi.middleware),
+		getDefaultMiddleware().concat(todoApi.middleware, shopNowApi.middleware, ProductsApi.middleware),
 });
 
 setupListeners(store.dispatch);
